@@ -1,4 +1,5 @@
 using Allure.Commons;
+using NLog;
 using NUnit.Allure.Core;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
@@ -11,6 +12,8 @@ namespace TAF_TMS_C1onl.Tests;
 [Parallelizable(ParallelScope.All)]
 public class BaseTest
 {
+    private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+    
     protected IWebDriver Driver;
     protected NavigationSteps NavigationSteps;
     protected ProjectSteps ProjectSteps;
@@ -19,6 +22,13 @@ public class BaseTest
     [SetUp]
     public void Setup()
     {
+        _logger.Trace("Сообщение уровня Trace");
+        _logger.Debug("Сообщение уровня Debug");
+        _logger.Info("Сообщение уровня Info");
+        _logger.Warn("Сообщение уровня Warn");
+        _logger.Error("Сообщение уровня Error");
+        _logger.Fatal("Сообщение уровня Fatal");
+        
         Driver = new Browser().Driver;
         
         // Инициализация Steps
