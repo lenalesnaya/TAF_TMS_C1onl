@@ -40,7 +40,8 @@ namespace TAF_TMS_C1onl.Models
         [JsonProperty("groups")]
         public List<Group> Groups { get; set; }
 
-        // delete arrays from output...
+        //public string? AdditionalProperty { get; set; }
+
         public override string ToString() => 
             $"{nameof(Id)}: {Id} // " +
             $"{nameof(Announcement)}: {Announcement} // " +
@@ -61,8 +62,8 @@ namespace TAF_TMS_C1onl.Models
                 IsCompleted == other.IsCompleted &&
                 ShowAnnouncement == other.ShowAnnouncement &&
                 Name == other.Name &&
-                SuiteMode == other.SuiteMode;
-                //Url == other.Url;
+                SuiteMode == other.SuiteMode &&
+                Url == other.Url;
                 //Users == other.Users &&
                 //Groups == other.Groups;
 
@@ -85,7 +86,5 @@ namespace TAF_TMS_C1onl.Models
 
             return Equals((Project) obj);
         }
-
-        //public string? AdditionalProperty { get; set; }
     }
 }

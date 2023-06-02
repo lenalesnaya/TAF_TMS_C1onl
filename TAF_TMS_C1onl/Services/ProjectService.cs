@@ -22,7 +22,7 @@ namespace TAF_TMS_C1onl.Services
             return _apiClient.Execute(request);
         }
 
-        public ProjectType GetProject<ProjectType>(string projectId)
+        public ProjectType GetProject<ProjectType>(int projectId)
             where ProjectType : Project, new()
         {
             var request = new RestRequest(GetProjectEndpoint)
@@ -31,7 +31,7 @@ namespace TAF_TMS_C1onl.Services
             return _apiClient.Execute<ProjectType>(request);
         }
 
-        public RestResponse GetProjectAsync(string projectId)
+        public RestResponse GetProjectAsync(int projectId)
         {
             var request = new RestRequest(GetProjectEndpoint)
                 .AddUrlSegment("project_id", projectId);
@@ -39,7 +39,7 @@ namespace TAF_TMS_C1onl.Services
             return _apiClient.ExecuteAsync(request).Result;
         }
 
-        public ProjectType GetProjectAsync<ProjectType>(string projectId)
+        public ProjectType GetProjectAsync<ProjectType>(int projectId)
             where ProjectType : Project, new()
         {
             var request = new RestRequest(GetProjectEndpoint)

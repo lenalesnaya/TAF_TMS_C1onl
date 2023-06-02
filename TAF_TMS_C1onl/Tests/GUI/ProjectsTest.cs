@@ -1,3 +1,4 @@
+using TAF_TMS_C1onl.Models;
 using TAF_TMS_C1onl.Utilites.Configuration;
 using TAF_TMS_C1onl.Utilites.Helpers;
 
@@ -9,7 +10,7 @@ public class ProjectsTest : BaseTest
     [Regression]
     public void CreateProjectTest()
     {
-        var testProject = TestDataHelper.GetTestProject("GeneralProject.json");
+        var testProject = TestDataHelper.GetTestEntity<Project>("GeneralProject");
         
         NavigationSteps.NavigateToLoginPage();
         NavigationSteps.SuccessfulLogin(Configurator.Admin);
