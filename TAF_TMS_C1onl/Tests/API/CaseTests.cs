@@ -15,14 +15,16 @@ namespace TAF_TMS_C1onl.Tests.API
             _caseService = new CaseService(_apiClient);
         }
 
-        [Test, TestCaseSource(typeof(CaseTitleRandomData), nameof(CaseTitleRandomData.TestCases))]
-        public void AddCase(string caseTitle)
+        [Test]
+        //[TestCaseSource(typeof(CaseTitleRandomData), nameof(CaseTitleRandomData.TestCases))]
+        public void AddCase(/*string caseTitle*/)
         {
-            var addedCase = HandleCaseAdding(caseTitle);
+            var randomCaseTitle = FakerHelper.Faker.Lorem.Word() + " case";
+            var addedCase = HandleCaseAdding(randomCaseTitle);
 
             Assert.Multiple(() =>
             {
-                Assert.That(addedCase!.Title, Is.EqualTo(caseTitle));
+                Assert.That(addedCase!.Title, Is.EqualTo(randomCaseTitle));
             });
         }
 
@@ -40,14 +42,15 @@ namespace TAF_TMS_C1onl.Tests.API
             });
         }
 
-        [Test, TestCaseSource(typeof(CaseTitleRandomData), nameof(CaseTitleRandomData.TestCases))]
-        public void UpdateCase(string caseNewTitle)
+        [Test]
+        //[TestCaseSource(typeof(CaseTitleRandomData), nameof(CaseTitleRandomData.TestCases))]
+        public void UpdateCase(/*string caseNewTitle*/)
         {
             var addedCase = HandleCaseAdding(TestDataHelper.GetTestEntity<Case>("GeneralCase").Title);
             var newCase = new Case
             {
-                Title = caseNewTitle
-            };
+                Title = FakerHelper.Faker.Lorem.Word() + " case"
+        };
 
             var receivedCase = _caseService.UpdateCase<Case>(addedCase!.Id, newCase);
             _logger.Info("Updated object! " + receivedCase);
