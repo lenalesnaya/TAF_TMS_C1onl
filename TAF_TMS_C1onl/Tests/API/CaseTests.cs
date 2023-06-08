@@ -22,10 +22,7 @@ namespace TAF_TMS_C1onl.Tests.API
             var randomCaseTitle = FakerHelper.Faker.Lorem.Word() + " case";
             var addedCase = HandleCaseAdding(randomCaseTitle);
 
-            Assert.Multiple(() =>
-            {
-                Assert.That(addedCase!.Title, Is.EqualTo(randomCaseTitle));
-            });
+            Assert.That(addedCase!.Title, Is.EqualTo(randomCaseTitle));
         }
 
         [Test]
@@ -36,10 +33,7 @@ namespace TAF_TMS_C1onl.Tests.API
             var receivedCase = _caseService.GetCase<Case>(addedCase!.Id);
             _logger.Info("Received object! " + receivedCase);
 
-            Assert.Multiple(() =>
-            {
-                Assert.That(receivedCase.Title, Is.EqualTo(addedCase.Title));
-            });
+            Assert.That(receivedCase.Title, Is.EqualTo(addedCase.Title));
         }
 
         [Test]
@@ -71,6 +65,7 @@ namespace TAF_TMS_C1onl.Tests.API
             try
             {
                 _caseService.GetCase(addedCase.Id);
+                Assert.That(false);
             }
             catch (HttpRequestException ex)
             {
