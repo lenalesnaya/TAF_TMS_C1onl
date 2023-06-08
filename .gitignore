@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/ProjectEvaluation/taf_tms_c1onl.metadata.v6.1
+/.vs/ProjectEvaluation/taf_tms_c1onl.projects.v6.1
+/.vs/TAF_TMS_C1onl/DesignTimeBuild/.dtbcache.v2
+/.vs/TAF_TMS_C1onl/v17/.futdcache.v2
+/.vs/TAF_TMS_C1onl/v17/.suo
+/.vs/TAF_TMS_C1onl/v17/TestStore/0/testlog.manifest
