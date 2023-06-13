@@ -2,7 +2,6 @@
 
 A short summary of the feature
 
-#@tag1
 Scenario: Simple test
 	Given Browser is opened :P
 	When Login page is opened ;P
