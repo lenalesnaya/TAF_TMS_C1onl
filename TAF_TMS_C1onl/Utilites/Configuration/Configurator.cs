@@ -2,6 +2,8 @@ using System.Reflection;
 using TAF_TMS_C1onl.Models;
 using TAF_TMS_C1onl.Models.Enums;
 using Microsoft.Extensions.Configuration;
+using TAF_TMS_C1onl.Utilites.Configuration;
+using System.Runtime;
 
 namespace TAF_TMS_C1onl.Utilites.Configuration
 {
@@ -42,6 +44,24 @@ namespace TAF_TMS_C1onl.Utilites.Configuration
                 appSettings.URL = child["URL"];
 
                 return appSettings;
+            }
+        }
+
+        public static DbSettings DbSettings
+        {
+            get
+            {
+                var dbSettings = new DbSettings();
+                var child = Configuration.GetSection("DbSettings");
+
+                dbSettings.Driver = child["DB_Driver"];
+                dbSettings.Server = child["DB_Server"];
+                dbSettings.Port = child["DB_Port"];
+                dbSettings.Schema = child["DB_Schema"];
+                dbSettings.Username = child["DB_Username"];
+                dbSettings.Password = child["DB_Password"];
+
+                return dbSettings;
             }
         }
 

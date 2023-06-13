@@ -2,7 +2,7 @@
 using TAF_TMS_C1onl.Clients;
 using TAF_TMS_C1onl.Models;
 
-namespace TAF_TMS_C1onl.Services
+namespace TAF_TMS_C1onl.Services.API
 {
     internal class CaseService : BaseService
     {

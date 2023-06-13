@@ -2,7 +2,7 @@
 using TAF_TMS_C1onl.Clients;
 using TAF_TMS_C1onl.Models;
 
-namespace TAF_TMS_C1onl.Services
+namespace TAF_TMS_C1onl.Services.API
 {
     // can we name a method as Async, if it doesn`t have async keyword?
     // should we pass async up the method call tree?
