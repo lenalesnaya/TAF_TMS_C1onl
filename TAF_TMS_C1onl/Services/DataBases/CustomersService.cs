@@ -62,14 +62,36 @@ namespace TAF_TMS_C1onl.Services.DataBases
             return customersList;
         }
 
-        public void AddCustomer(Customer customer)
+        public int AddCustomer(Customer customer)
         {
+            var query = "INSERT INTO public.customers(firstname, lastname, email, age) VALUES ($1, $2, $3, $4);";
+            using var cmd = new NpgsqlCommand(query, _connection)
+            {
+                Parameters =
+                {
+                    new() {Value = customer.FirstName},
+                    new() {Value = customer.LastName},
+                    new() {Value = customer.Email},
+                    new() {Value = customer.Age}
+                }
+            };
 
+            return cmd.ExecuteNonQuery();
         }
 
-        public void DeleteCustomer(Customer customer)
+        public int DeleteCustomer(string firstName, string lastName)
         {
+            var query = "DELETE FROM public.customers WHERE firstname = $1 and lastname = $2;";
+            using var cmd = new NpgsqlCommand(query, _connection)
+            {
+                Parameters =
+                {
+                    new() {Value = firstName},
+                    new() {Value = lastName},
+                }
+            };
 
+            return cmd.ExecuteNonQuery();
         }
     }
 }
