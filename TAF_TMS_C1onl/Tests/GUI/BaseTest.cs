@@ -29,7 +29,7 @@ public class BaseTest
         _logger.Error("Сообщение уровня Error");
         _logger.Fatal("Сообщение уровня Fatal");
         
-        Driver = new Browser().Driver;
+        Driver = new Browser().Driver!;
         
         // Инициализация Steps
         NavigationSteps = new NavigationSteps(Driver);

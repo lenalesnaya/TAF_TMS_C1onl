@@ -18,11 +18,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Allure" Version="3.5.0.73" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TAF_TMS_C1onl\TAF_TMS_C1onl.csproj" />
+	<None Remove="specflow.json" />
+	<Content Include="specflow.json">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
   </ItemGroup>
-
 </Project>

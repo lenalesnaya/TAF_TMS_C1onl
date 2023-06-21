@@ -1,6 +1,9 @@
-﻿using TAF_TMS_C1onl.Core;
+﻿using NUnit.Framework;
+using TAF_TMS_C1onl.Core;
 using TAF_TMS_C1onl.Utilites.Configuration;
 using TechTalk.SpecFlow;
+[assembly: Parallelizable(ParallelScope.Fixtures)]
+[assembly: LevelOfParallelism(4)]
 
 namespace Specflow.Specs.Hooks
 {
