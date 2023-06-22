@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using TAF_TMS_C1onl.Wrappers;
 
 namespace TAF_TMS_C1onl.Pages
 {
@@ -28,6 +29,6 @@ namespace TAF_TMS_C1onl.Pages
             return END_POINT;
         }
 
-        public IWebElement SidebarProjectsAddButton => Driver.FindElement(SidebarProjectsAddButtonBy);
+        public Button AddProjectSidebarButton => new(Driver, SidebarProjectsAddButtonBy);
     }
 }

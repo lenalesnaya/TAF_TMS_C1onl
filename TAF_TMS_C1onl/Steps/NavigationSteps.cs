@@ -39,9 +39,9 @@ public class NavigationSteps : BaseStep
 
     private void Login(string username, string psw)
     {
-        LoginPage.EmailInput().SendKeys(username);
-        LoginPage.PswInput().SendKeys(psw);
-        LoginPage.LoginInButton().Click();
+        LoginPage.EmailInput.SendKeys(username);
+        LoginPage.PswInput.SendKeys(psw);
+        LoginPage.LoginInButton.Click();
     }
 
 }

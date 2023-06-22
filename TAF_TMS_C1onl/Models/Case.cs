@@ -2,7 +2,7 @@
 
 namespace TAF_TMS_C1onl.Models
 {
-    internal class Case
+    public class Case
     {
         [JsonProperty("id")]
         public int Id { get; set; }

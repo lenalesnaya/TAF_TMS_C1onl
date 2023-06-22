@@ -44,7 +44,7 @@ namespace TAF_TMS_C1onl.Tests.API
             var newCase = new Case
             {
                 Title = FakerHelper.Faker.Lorem.Word() + " case"
-        };
+            };
 
             var receivedCase = _caseService.UpdateCase<Case>(addedCase!.Id, newCase);
             _logger.Info("Updated object! " + receivedCase);

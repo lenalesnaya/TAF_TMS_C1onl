@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAF_TMS_C1onl", "TAF_TMS_C1onl\TAF_TMS_C1onl.csproj", "{A759F629-8EDA-4309-8749-85D9A110EF47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow.Specs", "Specflow.Specs\Specflow.Specs.csproj", "{C7C9AC44-888F-4F0A-BDDF-4F013EE54C6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Specflow.Specs", "Specflow.Specs\Specflow.Specs.csproj", "{C7C9AC44-888F-4F0A-BDDF-4F013EE54C6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow.Specs.Homework", "Specflow.Specs.Homework\Specflow.Specs.Homework.csproj", "{3681C7FC-9DE5-4102-A9E3-757E6157CD57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C7C9AC44-888F-4F0A-BDDF-4F013EE54C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7C9AC44-888F-4F0A-BDDF-4F013EE54C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7C9AC44-888F-4F0A-BDDF-4F013EE54C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3681C7FC-9DE5-4102-A9E3-757E6157CD57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3681C7FC-9DE5-4102-A9E3-757E6157CD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3681C7FC-9DE5-4102-A9E3-757E6157CD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3681C7FC-9DE5-4102-A9E3-757E6157CD57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

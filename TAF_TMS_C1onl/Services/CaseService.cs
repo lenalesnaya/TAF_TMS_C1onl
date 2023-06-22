@@ -4,7 +4,7 @@ using TAF_TMS_C1onl.Models;
 
 namespace TAF_TMS_C1onl.Services
 {
-    internal class CaseService : BaseService
+    public class CaseService : BaseService
     {
         public const string GetCaseEndpoint = "index.php?/api/v2/get_case/{case_id}";
         public const string AddCaseEndpoint = "index.php?/api/v2/add_case/{section_id}";

@@ -2,7 +2,7 @@
 
 namespace TAF_TMS_C1onl.Services
 {
-    internal class BaseService
+    public class BaseService
     {
         protected ApiClient _apiClient;
 

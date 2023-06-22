@@ -23,7 +23,7 @@ public abstract class BasePage
     public abstract bool IsPageOpened();
     protected abstract string GetEndpoint();
 
-    private void OpenPageByUrl()
+    public void OpenPageByUrl()
     {
         Driver.Navigate().GoToUrl(Configurator.AppSettings.URL + GetEndpoint());
     }

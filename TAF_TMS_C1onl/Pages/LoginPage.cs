@@ -32,24 +32,28 @@ namespace TAF_TMS_C1onl.Pages
         }
 
         // Методы
-        public Input EmailInput()
+        public Input EmailInput => new(Driver, EmailInputBy);
+
+        public Input PswInput => new(Driver, PswInputBy);
+
+        public UIElement RememberMeCheckbox => new(Driver, RememberMeCheckboxBy);
+
+        public Button LoginInButton => new(Driver, LoginInButtonBy);
+
+        public DashboardPage Login(string username, string password)
         {
-            return new Input(Driver, EmailInputBy);  
+            TryToLogin(username, password);
+
+            return new DashboardPage(Driver);
         }
 
-        public Input PswInput()
+        public LoginPage TryToLogin(string username, string password)
         {
-            return new Input(Driver, PswInputBy);
-        }
+            EmailInput.SendKeys(username);
+            PswInput.SendKeys(password);
+            LoginInButton.Click();
 
-        public UIElement RememberMeCheckbox()
-        {
-            return new UIElement(Driver, RememberMeCheckboxBy);  
-        }
-
-        public Button LoginInButton()
-        {
-           return new Button(Driver, LoginInButtonBy);
+            return this;
         }
     }
 }
