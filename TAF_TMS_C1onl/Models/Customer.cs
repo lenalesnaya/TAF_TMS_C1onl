@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TAF_TMS_C1onl.Models
 {
@@ -6,6 +7,7 @@ namespace TAF_TMS_C1onl.Models
     public record Customer
     {
         [Column("id")]
+        [Key]
         public int Id { get; set; }
 
         [Column("firstname")]
