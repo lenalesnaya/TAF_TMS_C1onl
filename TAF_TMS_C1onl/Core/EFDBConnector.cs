@@ -7,6 +7,7 @@ namespace TAF_TMS_C1onl.Core
     internal class EFDBConnector : DbContext
     {
         public DbSet<Customer>? Customers { get; set; }
+        public DbSet<Case>? Cases { get; set; }
 
         public EFDBConnector()
         {

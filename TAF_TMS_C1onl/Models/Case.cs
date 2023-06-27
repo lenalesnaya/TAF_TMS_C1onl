@@ -1,51 +1,70 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TAF_TMS_C1onl.Models
 {
+    [Table("cases")]
+    [Keyless]
     internal class Case
     {
+        [NotMapped]
         [JsonProperty("id")]
         public int Id { get; set; }
 
+        [Column("title")]
         [JsonProperty("title")]
         public string Title { get; set; }
 
+        [Column("section_id")]
         [JsonProperty("section_id")]
         public int SectionId { get; set; }
 
+        [NotMapped]
         [JsonProperty("template_id")]
         public int TemplateId { get; set; }
 
+        [NotMapped]
         [JsonProperty("type_id")]
         public int TypeId { get; set; }
 
+        [NotMapped]
         [JsonProperty("priority_id")]
         public int PriorityId { get; set; }
 
+        [NotMapped]
         [JsonProperty("milestone_id")]
         public int? MilestoneId { get; set; }
 
+        [NotMapped]
         [JsonProperty("refs")]
         public string? Refs { get; set; }
 
+        [NotMapped]
         [JsonProperty("created_by")]
         public int CreatedBy { get; set; }
 
+        [NotMapped]
         [JsonProperty("created_on")]
         public string CreatedOn { get; set; }
 
+        [NotMapped]
         [JsonProperty("updated_by")]
         public int UpdatedBy { get; set; }
 
+        [NotMapped]
         [JsonProperty("updated_on")]
         public string UpdatedOn { get; set; }
 
+        [NotMapped]
         [JsonProperty("estimate")]
         public string? Estimate { get; set; }
 
+        [NotMapped]
         [JsonProperty("estimate_forecast")]
         public string EstimateForecast { get; set; }
 
+        [NotMapped]
         [JsonProperty("suite_id")]
         public int SuiteId { get; set; }
 

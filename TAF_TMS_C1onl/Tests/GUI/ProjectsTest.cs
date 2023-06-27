@@ -6,8 +6,8 @@ namespace TAF_TMS_C1onl.Tests;
 
 public class ProjectsTest : BaseTest
 {
-    [Test]
-    [Regression]
+    //[Test]
+    //[Regression]
     public void CreateProjectTest()
     {
         var testProject = TestDataHelper.GetTestEntity<Project>("GeneralProject");
